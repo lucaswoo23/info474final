@@ -1,6 +1,7 @@
 <html>
 <head>
   <h1 style='text-align:center'>Seattle Airbnb Data</h1>
+  <h3 style='text-align:center'> Visualization of Seattle's Airbnb listings scraped from 2018. This map shows Airbnb listing density throughout Seattle and deductions about most populated neighborhoods can be deduced.</h5> </h5>
   <title>A D3 map</title>
   <script src='https://d3js.org/d3.v4.min.js'></script>
   <!-- <script src='neighborhoods.js'></script> -->
@@ -47,34 +48,10 @@ d3.json("zip-codes.json", function(data) {
       .append('path')
       .attr('class', 'coord')
       .attr('fill', '#1fbae0')
+      .attr('fill-opacity', 0.5)
+      .attr("stroke", "#002e74")
       .attr('d', geoPath)
-      const links = [];
-      for (let i = 0; i < pointData.features.length - 1; i++) {
 
-      }
-  // points.selectAll( "image" )
-  // .data( lat_long.json.features )
-  // .enter()
-  // .append( "svg:image" )
-  // .attr("xlink:href","rainbowrat.png")
-  // .attr( "x", function(d){
-  //   return albersProjection( d.geometry.coordinates )[0] - 30;
-  // })
-  // .attr( "y", function(d){
-  //   return albersProjection( d.geometry.coordinates )[1] - 25;
-  // })
-  // .attr("width",60)
-  // .attr("height",50)
-  // .on( "click", function(){
-  //   d3.select(this)
-  //     .attr("opacity",1)
-  //     .transition()
-  //     .duration( 1000 )
-  //     .attr( "x", width * Math.round( Math.random() ) )
-  //     .attr( "y", height * Math.round( Math.random() ) )
-  //     .attr( "opacity", 0 )
-  //     .on("end",function(){
-  //       d3.select(this).remove();
   })
 
 
